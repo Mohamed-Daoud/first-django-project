@@ -1,6 +1,7 @@
 # first-django-project
 
-How to run this project
+### How to run this project
+
 0-) Clone this project
 
 1-) install python (the version used for this project 3.8.0)
