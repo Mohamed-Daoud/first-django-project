@@ -1,0 +1,20 @@
+{% extends 'base_layout.html' %}
+
+{% block headcontent %}
+<title>My Articles</title>
+{% endblock %}
+
+{% block bodycontent %}
+  <h1> Your Created Articles </h1>
+  <div class="my-Articles">
+      {% for myArt in myArticles %}
+        <h2>{{ myArt.title | upper }}</h2>
+        <p> Slug: {{ myArt.slug }} </p> <p> Snippet: {{ myArt.snippet|default:"Snippt Not Available" }}</p>
+        <p>{{ myArt.date | date:"M-d/Y H a" }} </p>
+        <p>---------------------------------------------------------------</p>
+        {% empty %}
+        <li>No articles have been found for {{ user }} </li>
+      {% endfor %}
+
+  </div>
+{% endblock %}

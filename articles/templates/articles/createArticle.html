@@ -1,0 +1,17 @@
+{% extends 'base_layout.html' %}
+
+{% block headcontent %}
+  <title>Create New Article</title>
+{% endblock %}
+
+{% block bodycontent %}
+  <div class="create-article">
+    <h2>Create Your Best Article Ever</h2>
+    <form class="site-form" action="{% url 'articles:create' %}" method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      {{ form }}
+      <input type="submit" name="noNeed" value="Create Article">
+    </form>
+  </div>
+  <script type="text/javascript" src="/assets/slugify.js"></script>
+{% endblock %}

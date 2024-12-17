@@ -1,0 +1,48 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+   <head>
+	    <meta charset="utf-8">
+
+	     {% block headcontent %}
+	      {% endblock %}
+
+	       <link rel="stylesheet" href="{% static 'styles.css' %}">
+         <a href="{% url 'home' %}">
+           <img src="{% static 'XP-Logo.jpg' %}"/>
+         </a>
+   </head>
+   <body>
+     <header>
+       <nav>
+         <ul>
+           <div class="checkLater">
+           {% if user.is_authenticated %}
+           <li> Logged-in User: {{ user }}</li>
+           <li>
+             <form class="logout-link" action="{% url 'accounts:logout' %}" method="post">
+               {% csrf_token %}
+               <button type="submit" name="noNeed">Logout</button>
+             </form>
+           </li>
+           {% comment %}
+           Revisit the style sheet many times.
+           {% endcomment %}
+           <li> <a href="{% url 'articles:create' %}"> Add New Article </a> </li>
+           <li> <a class="highlight" href="{% url 'articles:myArticles' %}"> Show My Articles </a> </li>
+           {% else %}
+
+             <li> <a href="{% url 'accounts:login' %}"> Login </a> </li>
+             <li> <a href="{% url 'accounts:signup' %}"> Signup </a> </li>
+           </div>
+           {% endif %}
+         </ul>
+       </nav>
+     </header>
+     <div class="wrapper">
+	      {% block bodycontent %}
+	       {% endblock %}
+	   </div>
+   </body>
+</html>

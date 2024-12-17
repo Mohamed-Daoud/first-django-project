@@ -1,0 +1,18 @@
+{% extends 'base_layout.html' %}
+
+{% block headcontent %}
+  <title>Login Page</title>
+{% endblock %}
+
+{% block bodycontent %}
+  <h1>Login Form</h1>
+  <form class="site-form" action="{% url 'accounts:login' %}" method="post">
+    {% csrf_token %}
+    {{ form }}
+    {% if request.GET.next %}
+      <input type="hidden" name="next" value="{{ request.GET.next }}">
+    {% endif %}
+    <input type="submit" name="noNeed" value="Login">
+  </form>
+
+{% endblock %}

@@ -1,0 +1,27 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Homepage with Logo</title>
+		<link rel="stylesheet" href="{% static 'styles.css' %}">
+		<img class="centerImage" src="{% static 'xp-logo.jpg'%}" />
+	</head>
+	<body>
+		<div class="wrapper">
+			<h1>home page</h1>
+			<p>Welcome to the First django project:</p>
+			<p>Building a blog using django</p>
+			<p>
+				<a href="{% url 'articles:list' %}"> Go To Articles Please </a>
+				<a href="{% url 'articles:create' %}">Create New Article </a>
+			</p>
+			<p> <a href="{% url 'accounts:signup' %}"> Go To Signup Page </a> </p>
+			<p> <a href="{% url 'accounts:login' %}"> Go To Login Page </a> </p>
+			<br><br>
+			<p> <a href="about/"> Go To About </a> </p>
+			<p> <a href="admin/"> Go To Admin </a> </p>
+		</div>
+	</body>
+</html>

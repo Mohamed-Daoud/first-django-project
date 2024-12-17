@@ -1,0 +1,21 @@
+{% extends 'base_layout.html' %}
+
+{% block headcontent %}
+  <title> Certain Article Content </title>
+{% endblock %}
+
+{% block bodycontent %}
+  <div class="article-Details">
+    <div class="article">
+      <a href="{{ artDetail.thumb.url }}">
+        <img class ="fixedHeightImage" src="{{ artDetail.thumb.url }}" />
+      </a>
+      <h1> {{ artDetail.title }} </h1>
+      <h3> {{ artDetail.slug }} </h3>
+      <p> {{ artDetail.body }} </p>
+      <p> {{ artDetail.date }} </p>
+      <p class="author"> Added By: {{ artDetail.author }} </p>
+    </div>
+  </div>
+
+{% endblock %}
