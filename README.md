@@ -14,7 +14,7 @@ python -m virtualenv env_name <br>
 4-) Install Django 3.2.25 <br>
 python -m pip install Django==3.2.25 <br>
 
-5-) Install Pillow
+5-) Install Pillow <br>
 python -m pip install Pillow
 
 6-) Go to the folder having manage.py file <br>
