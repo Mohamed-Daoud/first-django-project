@@ -24,3 +24,8 @@ python manage.py runserver <br>
 
 8-) open browser and go to 127.0.0.1:8000 <br>
 
+9-) Users <br>
+admin : superuser    <br>
+User1: HiTh1r1User1  <br>
+User2: HiTh2r2User2  <br>
+User3: HiTh3r3User3  <br>
