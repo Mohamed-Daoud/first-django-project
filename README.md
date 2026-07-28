@@ -10,13 +10,13 @@
 python -m virtualenv env_name <br>
 
 3-) Activate your environment <br>
-For Windows (PowerShell):
-C:\path...\venv_name\Scripts\Activate.ps1
+<b>For Windows</b> (PowerShell):     <br>
+C:\path...\venv_name\Scripts\Activate.ps1 <br> 
 
-For Linux:
-source path.../venv_name/bin/activate
+<b>For Linux:</b>                    <br>
+source path.../venv_name/bin/activate   <br>
 
-==> Upgrade pip while venv is active
+==> <b>Upgrade pip while venv is active</b> <br>
 pip install --upgrade pip
 
 4-) Install Django 3.2.25 <br>
